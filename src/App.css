@@ -1,0 +1,162 @@
+/* Main app container */
+
+.app {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+/* Header */
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #2563eb;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Form */
+
+form {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  margin-bottom: 35px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #2563eb;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 110px;
+}
+
+/* Button */
+
+button {
+  width: fit-content;
+  padding: 12px 22px;
+  background: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+/* Search section */
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 35px;
+}
+
+.search-box span {
+  font-weight: bold;
+  color: #444;
+}
+
+/* Project grid */
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+/* Individual project card */
+
+.project-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  padding: 18px 18px 10px;
+  color: #2563eb;
+}
+
+.project-card p {
+  padding: 0 18px 20px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* No projects message */
+
+.project-list h2 {
+  text-align: center;
+  color: #666;
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+  .app {
+    width: 95%;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
