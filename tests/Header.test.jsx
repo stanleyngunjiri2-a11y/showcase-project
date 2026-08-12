@@ -1,12 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import Header from "../components/Header";
+import Header from "../src/components/Header";
 
-describe("Header", () => {
-  test("renders the application title", () => {
-    render(<Header />);
+test("renders the header", () => {
+  render(<Header />);
 
-    expect(
-      screen.getByText(/Personal Project Showcase/i)
-    ).toBeInTheDocument();
-  });
+  expect(screen.getByText("Personal Project Showcase")).toBeInTheDocument();
 });

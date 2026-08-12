@@ -23,6 +23,7 @@ function ProjectForm({ addProject }) {
     addProject(newProject);
 
     setTitle("");
+    
     setDescription("");
   }
 
